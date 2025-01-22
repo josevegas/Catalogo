@@ -5,6 +5,7 @@ import { ProfileComponent } from './business/profile/profile.component';
 import { TablesComponent } from './business/tables/tables.component';
 import { GlutenfreeComponent } from './business/glutenfree/glutenfree.component';
 import { DairyfreeComponent } from './business/dairyfree/dairyfree.component';
+import { DetailComponent } from './shared/components/detail/detail.component';
 
 export const routes: Routes = [
     {
@@ -40,6 +41,10 @@ export const routes: Routes = [
                 path: 'dairyfree',
                 component: DairyfreeComponent,
                 title: 'Libre de Lácteos'
+            },
+            {
+                path: 'detail/:id',
+                component: DetailComponent,
             }
         ]
     },

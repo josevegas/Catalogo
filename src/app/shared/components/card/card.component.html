@@ -11,13 +11,14 @@
         <div class="relative bg-blue-200">
             <div class="py-2 px-2">
                 <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
-                    <p>Diets: </p>
+                    <span>Diets: </span>
                     <br/>
                     <ul>
                         @for (item of recipeInfo.diets; track $index) {
                             <li>{{item}}</li>
                         }
                     </ul>
+                    <span><a routerLink='/detail/{{recipeInfo.id}}'>More detail</a></span>
                 </div>
             </div>
         </div>
