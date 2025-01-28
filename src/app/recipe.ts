@@ -9,4 +9,5 @@ export interface Recipe {
     summary: string;
     healthScore: number;
     diets: string[];
+    source: string;
 }

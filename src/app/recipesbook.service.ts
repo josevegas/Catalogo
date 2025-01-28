@@ -18,6 +18,7 @@ export class RecipesbookService {
       summary: re.summary,
       healthScore: re.healthScore,
       diets: re.diets,
+      source: re.sourceUrl,
     }
 });
   constructor() { }

@@ -1,1 +1,18 @@
-<p>detail works!</p>
+<article>
+    <h2 style="font-size: 30pt; font-weight: bold;">{{recipe?.name}}</h2>
+    <img [src]="recipe?.image" alt="Foto de {{recipe?.name}}" style="object-fit: cover; height: 350px;">
+    <section style="font-size: 18px;" [innerHTML]="recipe?.summary">
+        <!-- {{recipe?.summary}} -->
+    </section>
+    <h3 style="font-size: 24px;">Recipe:</h3>
+    <p style="font-size: 18px; font-weight: bold;"><a [href]="recipe?.source" target="_blank">Click here to the recipe of {{recipe?.name}}</a></p>
+    <h3 style="font-size: 24px;">Diets:</h3>
+    <ul style="font-size: 18px;">
+        @for (item of recipe?.diets; track $index) {
+            <li>{{item}}</li>
+        }
+    </ul>
+</article>
+<div style="text-align: center;">
+    <button style="background-color: blue;border-radius: 5px; color: white;padding: 10px; font-size: 18px; font-weight: bold;" (click)="goBack()" type="button">Regresar</button>
+</div>
