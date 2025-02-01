@@ -18,6 +18,7 @@ export class HeaderComponent {
         if(url.includes('vegetarian')){this.pagina='Platos Vegetarianos';}
         if(url.includes('glutenfree')){this.pagina='Platos Libres de Gluten';}
         if(url.includes('dairyfree')){this.pagina='Platos Libres de Lácteos';}
+        if(url.includes('detail')){this.pagina='Detalles';}
       }
     })
   }
