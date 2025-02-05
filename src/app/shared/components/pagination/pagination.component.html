@@ -1,0 +1,7 @@
+<div class="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+    @for (item of datosPagina; track $index) {
+        <app-card [recipeInfo]="item"></app-card>
+    }
+</div>
+<p>{{pagActual}}</p>
+<button (click)="pagPrev()" type="button">Anterior</button><button (click)="pagSig()" type="button">Siguiente</button>
