@@ -12,13 +12,18 @@
             <div class="py-2 px-2">
                 <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
                     <span>Diets: </span>
-                    <br/>
+                </div>
+                <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
                     <ul>
                         @for (item of recipeInfo.diets; track $index) {
                             <li>{{item}}</li>
                         }
                     </ul>
-                    <span><a routerLink='/detail/{{recipeInfo.id}}'>More detail</a></span>
+                    <!-- <span><a routerLink='/detail/{{recipeInfo.id}}'>More detail</a></span> -->
+                    
+                </div>
+                <div class="text-gray-600 text-sm font-medium flex mb-4 mt-2">
+                    <span style="text-align: right;"><a routerLink='/detail/{{recipeInfo.id}}'>More detail</a></span>
                 </div>
             </div>
         </div>

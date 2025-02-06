@@ -1,15 +1,12 @@
-import { Component, inject } from '@angular/core';
-import { Recipe } from '../../recipe';
-import { CardComponent } from '../../shared/components/card/card.component';
-import { RecipesbookService } from '../../recipesbook.service';
+import { Component } from '@angular/core';
+import { PaginationComponent } from '../../shared/components/pagination/pagination.component';
 
 @Component({
   selector: 'app-tables',
-  imports: [CardComponent],
+  imports: [PaginationComponent],
   templateUrl: './tables.component.html',
   styleUrl: './tables.component.css'
 })
 export class TablesComponent {
-  recipesBook:RecipesbookService=inject(RecipesbookService)
-  vegetarianRecipes:Recipe[]=this.recipesBook.getVegetarianRecipes()
+  consulta='vegetarian'
 }

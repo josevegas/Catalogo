@@ -20,7 +20,7 @@ export class PaginationComponent implements OnChanges{
   pagFinal=0;
   rangoItems=[6,9,12];
   pagSig(){
-    if(this.pagActual<=this.pagFinal){
+    if(this.pagActual<this.pagFinal){
       this.pagActual+=1;
       this.datosXPagina();
     }

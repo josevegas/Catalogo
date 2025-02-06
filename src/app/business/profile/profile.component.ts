@@ -8,5 +8,5 @@ import { PaginationComponent } from '../../shared/components/pagination/paginati
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  
+  consulta='vegan';
 }

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { PaginationComponent } from '../../shared/components/pagination/pagination.component';
 
 @Component({
