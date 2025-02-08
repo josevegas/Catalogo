@@ -1,7 +1,10 @@
-<div class="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-    @for (item of datosPagina; track $index) {
-        <app-card [recipeInfo]="item"></app-card>
-    }
+<div>
+    <div class="container mx-auto mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        @for (item of datosPagina; track $index) {
+            <app-card [recipeInfo]="item"></app-card>
+        }
+    </div>
+    <button (click)="pagPrev()" [disabled]="pagActual===1" class="bg-blue-500 text-white border-2 border-blue-500 rounded mx-2 my-4 px-2 py-2">Anterior</button>
+    <span>{{pagActual}}/{{pagFinal}}</span>
+    <button (click)="pagSig()" [disabled]="pagActual==pagFinal" class="bg-blue-500 text-white border-2 border-blue-500 rounded mx-2 my-4 px-2 py-2">Siguiente</button>
 </div>
-<p>{{pagActual}}/{{pagFinal}}</p>
-<button (click)="pagPrev()" type="button">Anterior</button><button (click)="pagSig()" type="button">Siguiente</button>
