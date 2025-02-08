@@ -19,17 +19,22 @@ export class PaginationComponent implements OnChanges{
   pagActual=1;
   pagFinal=0;
   rangoItems=[6,9,12];
-  pagSig(){
-    if(this.pagActual<this.pagFinal){
-      this.pagActual+=1;
-      this.datosXPagina();
-    }
+  selectedValue:number|null=null;
+  onSelectChange(event: Event){
+    const selectElement=event.target as HTMLSelectElement;
+    this.itemsXPag=parseInt(selectElement.value);
+    this.pagFinal=Math.ceil(this.totalItems/this.itemsXPag);
+    this.datosXPagina();
   }
-  pagPrev(){
-    if(this.pagActual>1){
-      this.pagActual-=1;
-      this.datosXPagina();
+  cambioPag(pag: number){
+    switch (pag){
+      case -1: this.pagActual-=1;
+      break;
+      case 0: this.pagActual+=1;
+      break;
+      default: this.pagActual=pag;
     }
+    this.datosXPagina();
   }
   private cargarDatos():void{
     switch(this.consulta){
