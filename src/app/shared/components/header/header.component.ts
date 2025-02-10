@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  @Output() toggleMenu= new EventEmitter<boolean>()
+  @Input() isOpen:boolean=false;
   pagina:string='';
   constructor(private router:Router){
     this.router.events.subscribe(event=>{
@@ -21,5 +23,9 @@ export class HeaderComponent {
         if(url.includes('detail')){this.pagina='Detalles';}
       }
     })
+  }
+  onClick(){
+    console.log(this.isOpen)
+    this.toggleMenu.emit(!this.isOpen)
   }
 }
