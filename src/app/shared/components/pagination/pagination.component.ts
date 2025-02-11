@@ -54,6 +54,7 @@ export class PaginationComponent implements OnChanges{
     
   }
   datosXPagina():void{
+    if(this.pagActual>this.pagFinal) this.pagActual=this.pagFinal
     var inicio=(this.pagActual-1)*this.itemsXPag;
     var fin=this.pagActual*this.itemsXPag;
     this.datosPagina=this.datosTotales.slice(inicio,fin)
