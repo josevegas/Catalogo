@@ -1,5 +1,5 @@
 <div class="min-h-screen bg-gray-50/50">
-    <app-sidebar [isOpen]="isOpen"></app-sidebar>
+    <app-sidebar [isOpen]="isOpen" (toggleSidebar)="onToggleMenu($event)"></app-sidebar>
     <div class="p-4 xl:ml-80">
         <app-header [isOpen]="isOpen" (toggleMenu)="onToggleMenu($event)"></app-header>
         <div class="mt-12">

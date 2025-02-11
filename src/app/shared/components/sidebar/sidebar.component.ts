@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class SidebarComponent {
   @Input() isOpen:boolean=false;
-  toggleSidebar(){
-    this.isOpen=!this.isOpen;
+  @Output() toggleSidebar=new EventEmitter<boolean>();
+  isToggleSidebar(){
+    this.toggleSidebar.emit(!this.isOpen);
   }
 }

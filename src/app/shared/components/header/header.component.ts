@@ -25,7 +25,6 @@ export class HeaderComponent {
     })
   }
   onClick(){
-    console.log(this.isOpen)
     this.toggleMenu.emit(!this.isOpen)
   }
 }
